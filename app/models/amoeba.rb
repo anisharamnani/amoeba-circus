@@ -1,3 +1,4 @@
-class Talent < ActiveRecord::Base
-	has_many :amoebas
+class Amoeba < ActiveRecord::Base
+	belongs_to :acts
+	belongs_to :talents
 end 

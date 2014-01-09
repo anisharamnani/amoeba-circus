@@ -1,4 +1,4 @@
 class Act < ActiveRecord::Base
-	belongs_to :acts
-	belongs_to :talent
+	has_many :amoebas
+	has_many :talents, through :amoebas 
 end 
