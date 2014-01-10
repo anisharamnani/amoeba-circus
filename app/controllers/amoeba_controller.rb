@@ -30,7 +30,6 @@ class AmoebaController < ApplicationController
 	def destroy 
 		@amoeba = Amoeba.find(params[:id])
 		@amoeba.destroy
-		redirect_to @amoebas
 	end 
 
 end
