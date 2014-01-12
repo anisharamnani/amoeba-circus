@@ -1,0 +1,8 @@
+%h1 
+	= @amoeba.name 
+%ul 
+	%li= "Generation #{@amoeba.generation}"
+	%li= "Talent Id #{@amoeba.talent_id}"
+	%li= "Act Id #{@amoeba.act_id}"
+
+=link_to("Back", amoebas_path)

@@ -1,4 +1,4 @@
-class AmoebaController < ApplicationController
+class AmoebasController < ApplicationController
 	def index 
 		@amoebas = Amoeba.all
 	end 

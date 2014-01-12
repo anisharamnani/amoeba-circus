@@ -1,0 +1,21 @@
+%h1 Listing Acts
+%table 
+	%tr 
+		%th Name 
+		%th Date 
+		%th Time
+		%th Show 
+		%th Edit 
+		%th Delete
+
+	- @acts.each do |act|
+		%tr
+			%td= act.name 
+			%td= act.date 
+			%td= act.time
+			%td= link_to 'Show', act 
+			%td= link_to 'Edit', edit_act_path(act)
+			%td= link_to 'Delete', act, :method => :delete, :data => {:confirm => 'Are you sure'}
+	%br 
+
+= link_to 'New Post', new_act_path

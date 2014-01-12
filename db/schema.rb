@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140109220309) do
+ActiveRecord::Schema.define(:version => 20140110160128) do
 
   create_table "acts", :force => true do |t|
     t.string   "name"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(:version => 20140109220309) do
 
   create_table "amoebas", :force => true do |t|
     t.string  "name"
-    t.integer "generation",   :default => 1
-    t.integer "talent_id_id"
-    t.integer "act_id_id"
+    t.integer "generation", :default => 1
+    t.integer "talent_id"
+    t.integer "act_id"
   end
 
   create_table "talents", :force => true do |t|

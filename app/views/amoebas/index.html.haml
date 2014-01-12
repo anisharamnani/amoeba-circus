@@ -1,0 +1,22 @@
+%h1 Listing Amoebas
+%table 
+	%tr 
+		%th Name 
+		%th Generation 
+		%th Talent ID
+		%th Act ID 
+		%th Show 
+		%th Edit 
+		%th Delete
+
+	- @amoebas.each do |amoeba|
+		%td= amoeba.name 
+		%td= amoeba.generation 
+		%td= amoeba.talent_id
+		%td= amoeba.act_id
+		%td= link_to 'Show', amoeba 
+		%td= link_to 'Edit', edit_amoeba_path(amoeba)
+		%td= link_to 'Delete', amoeba, :method => :delete, :data => {:confirm => 'Are you sure'}
+
+%br 
+= link_to 'New Post', new_amoeba_path
