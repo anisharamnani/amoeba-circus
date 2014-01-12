@@ -30,5 +30,6 @@ class ActsController < ApplicationController
 	def destroy 
 		@act = Act.find(params[:id])
 		@act.destroy
+		redirect_to @act
 	end 
 end

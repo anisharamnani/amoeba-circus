@@ -12,6 +12,7 @@ AmoebaCircus::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   resources :amoebas
+  get '/amoebas/:id/split' => 'amoebas#split'
   resources :acts
 
   # Sample resource route with options:

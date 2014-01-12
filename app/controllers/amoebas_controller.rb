@@ -30,6 +30,13 @@ class AmoebasController < ApplicationController
 	def destroy 
 		@amoeba = Amoeba.find(params[:id])
 		@amoeba.destroy
+		redirect_to @amoeba 
+	end 
+
+	def split
+		@amoeba = Amoeba.find(params[:id]) 
+		@amoeba.split
+		redirect_to '/amoebas'
 	end 
 
 end

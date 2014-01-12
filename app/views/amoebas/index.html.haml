@@ -8,15 +8,17 @@
 		%th Show 
 		%th Edit 
 		%th Delete
+		%th Split
 
 	- @amoebas.each do |amoeba|
-		%td= amoeba.name 
-		%td= amoeba.generation 
-		%td= amoeba.talent_id
-		%td= amoeba.act_id
-		%td= link_to 'Show', amoeba 
-		%td= link_to 'Edit', edit_amoeba_path(amoeba)
-		%td= link_to 'Delete', amoeba, :method => :delete, :data => {:confirm => 'Are you sure'}
-
+		%tr
+			%td= amoeba.name 
+			%td= amoeba.generation 
+			%td= amoeba.talent_id
+			%td= amoeba.act_id
+			%td= link_to 'Show', amoeba 
+			%td= link_to 'Edit', edit_amoeba_path(amoeba)
+			%td= link_to 'Delete', amoeba, :method => :delete, :data => {:confirm => 'Are you sure'}
+			%td= link_to 'Split', "/amoebas/#{amoeba.id}/split"
 %br 
 = link_to 'New Post', new_amoeba_path
